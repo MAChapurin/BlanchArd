@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (max-width: 1440px) {
   .header-container {
     display: -webkit-box;
@@ -65,6 +72,10 @@
     min-width: 280px;
   }
 
+  .choices.is-open ~ label {
+    opacity: 0;
+  }
+
   /* .galery__swiper .swiper-button-prev {
     top: 10%;
     left: 7.4%;
@@ -104,7 +115,7 @@
   }
 
   .contacts__title-wrap,
-  .form__messengers {
+  .form-messengers {
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
@@ -161,12 +172,6 @@
     line-height: 22px;
   }
 
-
-
-  .catalog__li {
-    padding: 30px 0;
-  }
-
   .events {
     padding-top: 17px;
   }
@@ -189,6 +194,7 @@
   .header-container {
     padding-right: 40px;
     padding-bottom: 26px;
+    padding: 29px 40px 26px 50px;
     position: relative;
   }
   .header__nav {
@@ -234,6 +240,10 @@
       -webkit-transform 0.3s ease-in-out;
     -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
       width 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out,
+      width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out,
+      width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
       width 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
@@ -292,7 +302,9 @@
       -webkit-transform 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
       -webkit-transform 0.3s ease-in-out;
     opacity: 0;
@@ -313,7 +325,7 @@
   }
 
   .header__link_join {
-    padding: 20px 88px;
+    padding: 0px 88px;
     border: 2px solid #9d5cd0;
     border-radius: 100px;
     margin-top: auto;
@@ -327,7 +339,7 @@
     gap: 10px;
   }
 
-  .header__search_close {
+  .header__search-close {
     border: none;
     background: transparent;
     display: none;
@@ -337,7 +349,7 @@
     width: 100%;
   }
 
-  .header__search_active .header__search_close {
+  .header__search_active .header__search-close {
     display: inline-block;
   }
 
@@ -377,16 +389,16 @@
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
     /*Чтобы подогнать под макет */
-    margin-bottom: 150px;
+    margin-bottom: 125px;
   }
 
-  .slide_1 {
+  .slide-1 {
     background-image: url("../img/museum/birmingham-museums-trust-slide1-1024.jpg");
   }
-  .slide_2 {
+  .slide-2 {
     background-image: url("../img/museum/birmingham-museums-trust-slide2-1024.jpg");
   }
-  .slide_3 {
+  .slide-3 {
     background-image: url("../img/museum/birmingham-museums-trust-slide3-1024.jpg");
   }
 
@@ -394,8 +406,21 @@
     padding: 80px 0 70px;
   }
 
+  .galery {
+    padding-bottom: 35px;
+  }
+
   .galery__select {
     margin-bottom: 114px;
+  }
+
+  .galery__left {
+    padding-bottom: 80px;
+  }
+
+  .galery__left .choices {
+    min-width: 281px;
+    max-width: 281px;
   }
 
   .galery__swiper {
@@ -416,6 +441,10 @@
   .galery__swiper .swiper-button-prev {
     top: 48px;
     left: 50px;
+  }
+
+  .catalog {
+    margin-bottom: 80px;
   }
 
   .events {
@@ -480,7 +509,7 @@
   }
 
   .form__button {
-    padding: 12px 42px;
+    padding: 10px 42px;
   }
 
   .vk-link svg,
@@ -494,17 +523,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .slide_1 {
-    background-image: url("../img/museum/birmingham-museums-slide1-768.jpg");
-  }
-  .slide_2 {
-    background-image: url("../img/museum/birmingham-museums-slide2-768.jpg");
-  }
-  .slide_3 {
-    background-image: url("../img/museum/birmingham-museums-slide3-768.jpg");
-  }
-
+@media (max-width: 950px) {
   .galery .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -517,6 +536,11 @@
     margin-bottom: 10px;
   }
 
+  .galery__left .choices {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
   .galery__select {
     max-width: 280px;
     margin-bottom: 48px;
@@ -524,23 +548,39 @@
 
   .galery__swiper {
     padding: 0;
-    padding-top: 85px;
-    margin-bottom: 76px;
+    padding-top: 89px;
+    margin-bottom: 42px;
   }
 
   .galery__swiper-pagination {
-    top: 32px;
+    top: 36px;
     left: 40px;
   }
 
   .galery__swiper .swiper-button-next {
-    top: 48px;
+    top: 50px;
     left: 102px;
   }
 
   .galery__swiper .swiper-button-prev {
-    top: 48px;
+    top: 50px;
     left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-1 {
+    background-image: url("../img/museum/birmingham-museums-slide1-768.jpg");
+  }
+  .slide-2 {
+    background-image: url("../img/museum/birmingham-museums-slide2-768.jpg");
+  }
+  .slide-3 {
+    background-image: url("../img/museum/birmingham-museums-slide3-768.jpg");
+  }
+
+  .galery__left .choices {
+    margin-bottom: 42px;
   }
 
   .catalog {
@@ -556,7 +596,7 @@
   }
 
   .catalog__right {
-    margin-bottom: 51px;
+    margin-bottom: 113px;
   }
 
   .catalog__painter-block {
@@ -566,8 +606,11 @@
     flex-direction: column-reverse;
   }
 
-  .catalog__li {
+  /* .catalog__li {
     padding-bottom: 34px;
+  } */
+  .catalog__li {
+    padding: 32px 0;
   }
 
   .catalog__li::after {
@@ -587,6 +630,8 @@
   }
 
   .ac .ac-panel .ac-text {
+    padding-top: 35px;
+    overflow-y: scroll;
     -ms-grid-columns: (1fr) [3];
     grid-template-columns: repeat(3, 1fr);
     margin: 0;
@@ -603,6 +648,11 @@
 
   .catalog__left .desc-title {
     margin-bottom: 5px;
+  }
+
+  .events .swiper-button-next,
+  .events .swiper-button-prev {
+    display: none;
   }
 
   .events__wrap {
@@ -837,6 +887,17 @@
     top: 45px;
   }
 
+  .header__link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .header__link_join {
+    padding: 10px 40px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
   .hero {
     min-height: 310px;
   }
@@ -893,9 +954,17 @@
     margin-bottom: 12px;
   }
 
+  .galery__left {
+    margin-bottom: 15px;
+  }
+
   .galery__select {
     max-width: 100%;
-    margin-bottom: 39px;
+
+  }
+
+  .galery__left .choices {
+    margin-bottom: 30px;
   }
 
   .galery__img {
@@ -908,23 +977,29 @@
   }
 
   .galery__swiper-pagination {
-    top: 408px;
+    top: 95%;
     left: 120px;
   }
 
   .galery__swiper .swiper-button-next {
-    top: 422px;
+    /* top: 422px; */
+    top: 98%;
+    bottom: 0;
     left: 182px;
   }
 
   .galery__swiper .swiper-button-prev {
-    top: 422px;
+    top: 98%;
     left: 79px;
   }
 
   .catalog {
     padding-top: 50px;
     margin-bottom: 31px;
+  }
+
+  .catalog__right {
+    margin-bottom: 50px;
   }
 
   .catalog .h2 {
@@ -1002,7 +1077,9 @@
   .default__wrap {
     max-width: 174px;
     text-align: left;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   .events {
@@ -1109,7 +1186,7 @@
     display: none;
   }
 
-  .form__messengers .h3 {
+  .form-messengers .h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 32px;

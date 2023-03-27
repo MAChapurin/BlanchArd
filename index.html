@@ -42,6 +42,7 @@
     <script defer src="js/burger.js"></script>
     <script defer src="js/galeryModal.js"></script>
     <script defer src="js/select.js"></script>
+    <script defer src="js/validation.js"></script>
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
       type="text/javascript"
@@ -52,7 +53,7 @@
   <body>
     <div class="modal" style="display: none">
       <div class="modal__wrap">
-        <button class="modal__close">
+        <button class="modal__close" aria-label="Кнопка закрытия модального окна">
           <svg
             width="16"
             height="16"
@@ -219,7 +220,7 @@
             >Контакты</a
           >
         </nav>
-        <a href="#" class="header__link" tabindex="1">
+        <a href="#" class="header__link" tabindex="1" aria-label="Ссылка войти на сайт">
           <svg
             width="13"
             height="13"
@@ -261,7 +262,7 @@
             type="text"
             placeholder="Поиск по сайту"
           />
-          <button class="header__search_close">
+          <button class="header__search-close" aria-label="Отменить поиск">
             <svg
               width="23"
               height="23"
@@ -298,7 +299,7 @@
                     <span class="hero__arrow"></span>
                   </button>
 
-                  <div class="menu__dropdown dropdown">
+                  <div class="dropdown">
                     <div class="dropdown__simplebar">
                       <ul class="dropdown__list">
                         <li
@@ -307,7 +308,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Тинторетто
+                          <a href="#" class="dropdown__link"> Тинторетто </a>
                         </li>
                         <li
                           style="
@@ -315,7 +316,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Фридрих
+                          <a href="#" class="dropdown__link"> Фридрих </a>
                         </li>
                         <li
                           style="
@@ -323,7 +324,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Леонардо
+                          <a href="#" class="dropdown__link"> Леонардо </a>
                         </li>
                         <li
                           style="
@@ -331,7 +332,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Веррокью
+                          <a href="#" class="dropdown__link"> Веррокью </a>
                         </li>
                         <li
                           style="
@@ -339,7 +340,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Фридрих
+                          <a href="#" class="dropdown__link"> Фридрих </a>
                         </li>
                         <li
                           style="
@@ -347,7 +348,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Леонардо
+                          <a href="#" class="dropdown__link"> Леонардо </a>
                         </li>
                         <li
                           style="
@@ -355,7 +356,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Веррокью
+                          <a href="#" class="dropdown__link"> Веррокью </a>
                         </li>
                       </ul>
                     </div>
@@ -367,14 +368,14 @@
                     <i class="hero__arrow"></i>
                   </button>
 
-                  <div class="menu__dropdown dropdown">
+                  <div class="dropdown">
                     <div class="dropdown__simplebar">
                       <ul class="dropdown__list">
                         <li
                           style="background-image: url('img/dropdown/mone.jpg')"
                           class="dropdown__item"
                         >
-                          Моне
+                          <a href="#" class="dropdown__link"> Моне </a>
                         </li>
                         <li
                           style="
@@ -382,13 +383,13 @@
                           "
                           class="dropdown__item"
                         >
-                          Сислей
+                          <a href="#" class="dropdown__link"> Сислей </a>
                         </li>
                         <li
                           style="background-image: url('img/dropdown/mane.jpg')"
                           class="dropdown__item"
                         >
-                          Мане
+                          <a href="#" class="dropdown__link"> Мане </a>
                         </li>
                         <li
                           style="
@@ -396,13 +397,13 @@
                           "
                           class="dropdown__item"
                         >
-                          Ренуар
+                          <a href="#" class="dropdown__link"> Ренуар </a>
                         </li>
                         <li
                           style="background-image: url('img/dropdown/mone.jpg')"
                           class="dropdown__item"
                         >
-                          Моне
+                          <a href="#" class="dropdown__link"> Моне </a>
                         </li>
                         <li
                           style="
@@ -410,7 +411,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Сислей
+                          <a href="#" class="dropdown__link"> Сислей </a>
                         </li>
                         <li
                           style="
@@ -418,7 +419,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Ренуар
+                          <a href="#" class="dropdown__link"> Ренуар </a>
                         </li>
                       </ul>
                     </div>
@@ -430,7 +431,7 @@
                     <i class="hero__arrow"></i>
                   </button>
 
-                  <div class="menu__dropdown dropdown">
+                  <div class="dropdown">
                     <div class="dropdown__simplebar">
                       <ul class="dropdown__list">
                         <li
@@ -439,7 +440,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Ван Гог
+                          <a href="#" class="dropdown__link"> Ван Гог </a>
                         </li>
                         <li
                           style="
@@ -447,7 +448,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Сезанн
+                          <a href="#" class="dropdown__link"> Сезанн </a>
                         </li>
                         <li
                           style="
@@ -455,13 +456,13 @@
                           "
                           class="dropdown__item"
                         >
-                          Гоген
+                          <a href="#" class="dropdown__link"> Гоген </a>
                         </li>
                         <li
                           style="background-image: url('img/dropdown/sura.jpg')"
                           class="dropdown__item"
                         >
-                          Сёра
+                          <a href="#" class="dropdown__link"> Сёра </a>
                         </li>
                         <li
                           style="
@@ -469,7 +470,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Ван Гог
+                          <a href="#" class="dropdown__link"> Ван Гог </a>
                         </li>
                         <li
                           style="
@@ -477,7 +478,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Сезанн
+                          <a href="#" class="dropdown__link"> Сезанн </a>
                         </li>
                         <li
                           style="
@@ -485,7 +486,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Гоген
+                          <a href="#" class="dropdown__link"> Гоген </a>
                         </li>
                       </ul>
                     </div>
@@ -497,7 +498,7 @@
                     <i class="hero__arrow"></i>
                   </button>
 
-                  <div class="menu__dropdown dropdown">
+                  <div class="dropdown">
                     <div class="dropdown__simplebar">
                       <ul class="dropdown__list">
                         <li
@@ -506,7 +507,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Кандинский
+                          <a href="#" class="dropdown__link"> Кандинский </a>
                         </li>
                         <li
                           style="
@@ -514,7 +515,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Маринетти
+                          <a href="#" class="dropdown__link"> Маринетти </a>
                         </li>
                         <li
                           style="
@@ -522,7 +523,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Малевич
+                          <a href="#" class="dropdown__link"> Малевич </a>
                         </li>
                         <li
                           style="
@@ -530,7 +531,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Пикассо
+                          <a href="#" class="dropdown__link"> Пикассо </a>
                         </li>
                         <li
                           style="
@@ -538,7 +539,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Кандинский
+                          <a href="#" class="dropdown__link"> Кандинский </a>
                         </li>
                         <li
                           style="
@@ -546,7 +547,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Маринетти
+                          <a href="#" class="dropdown__link"> Маринетти </a>
                         </li>
                         <li
                           style="
@@ -554,7 +555,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Малевич
+                          <a href="#" class="dropdown__link"> Малевич </a>
                         </li>
                       </ul>
                     </div>
@@ -566,7 +567,7 @@
                     <i class="hero__arrow"></i>
                   </button>
 
-                  <div class="menu__dropdown dropdown">
+                  <div class="dropdown">
                     <div class="dropdown__simplebar">
                       <ul class="dropdown__list">
                         <li
@@ -575,7 +576,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Карра
+                          <a href="#" class="dropdown__link"> Карра </a>
                         </li>
                         <li
                           style="
@@ -583,7 +584,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Прателла
+                          <a href="#" class="dropdown__link"> Прателла </a>
                         </li>
                         <li
                           style="
@@ -591,7 +592,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Северини
+                          <a href="#" class="dropdown__link"> Северини </a>
                         </li>
                         <li
                           style="
@@ -599,7 +600,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Балла
+                          <a href="#" class="dropdown__link"> Балла </a>
                         </li>
                         <li
                           style="
@@ -607,7 +608,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Прателла
+                          <a href="#" class="dropdown__link"> Прателла </a>
                         </li>
                         <li
                           style="
@@ -615,7 +616,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Северини
+                          <a href="#" class="dropdown__link"> Северини </a>
                         </li>
                         <li
                           style="
@@ -623,7 +624,7 @@
                           "
                           class="dropdown__item"
                         >
-                          Балла
+                          <a href="#" class="dropdown__link"> Балла </a>
                         </li>
                       </ul>
                     </div>
@@ -660,9 +661,9 @@
 
         <div class="swiper1 swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide_1"></div>
-            <div class="swiper-slide slide_2"></div>
-            <div class="swiper-slide slide_3"></div>
+            <div class="swiper-slide slide-1"></div>
+            <div class="swiper-slide slide-2"></div>
+            <div class="swiper-slide slide-3"></div>
           </div>
         </div>
       </section>
@@ -892,10 +893,10 @@
                 в&nbsp;костюмах того времени).
               </p>
               <a
-                id="default__link"
+                id="default-link"
                 style="display: none"
                 href="#galery"
-                class="default__link"
+                class="default-link"
                 >В галерею</a
               >
             </div>
@@ -960,7 +961,7 @@
                           А в галерее вы всегда можете найти что-то интересное
                           для себя
                         </p>
-                        <a href="#galery" class="default__link">В галерею</a>
+                        <a href="#galery" class="default-link">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -996,7 +997,7 @@
                           А в галерее вы всегда можете найти что-то интересное
                           для себя
                         </p>
-                        <a href="#galery" class="default__link">В галерею</a>
+                        <a href="#galery" class="default-link">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1032,7 +1033,7 @@
                           А в галерее вы всегда можете найти что-то интересное
                           для себя
                         </p>
-                        <a href="#galery" class="default__link">В галерею</a>
+                        <a href="#galery" class="default-link">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1068,7 +1069,7 @@
                           А в галерее вы всегда можете найти что-то интересное
                           для себя
                         </p>
-                        <a href="#galery" class="default__link">В галерею</a>
+                        <a href="#galery" class="default-link">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1104,7 +1105,7 @@
                           А в галерее вы всегда можете найти что-то интересное
                           для себя
                         </p>
-                        <a href="#galery" class="default__link">В галерею</a>
+                        <a href="#galery" class="default-link">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1140,7 +1141,7 @@
                           А в галерее вы всегда можете найти что-то интересное
                           для себя
                         </p>
-                        <a href="#galery" class="default__link">В галерею</a>
+                        <a href="#galery" class="default-link">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1153,167 +1154,178 @@
       <section class="events" id="events">
         <div class="container">
           <div class="h2">События</div>
-          <div class="swiper events__swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    srcset="img/events/event290-1.jpg"
-                    media="(max-width: 440px)"
-                  />
-                  <source
-                    srcset="img/events/event317-1.jpg"
-                    media="(max-width: 768px)"
-                  />
-                  <source
-                    srcset="img/events/event290-1.jpg"
-                    media="(max-width: 1024px)"
-                  />
-                  <img src="img/events/event-1.jpg" alt="event" />
-                </picture>
-                <div class="events__wrap">
-                  <span class="events__span"
-                    >Музей им. Щусева<br />
-                    с 20 марта по 30 апреля</span
-                  >
-                  <h3 class="h3 events__h3">
-                    Книжная гравюра в<br />восприятии
-                  </h3>
-                  <p class="events__desc">
-                    Один из&nbsp;ведущих флорентийских художников Кватроченто,
-                    основатель художественной династии, которую продолжили его
-                    брат Давид и&nbsp;сын Ридольфо
-                  </p>
-                  <a class="events__link" href="#">Подробнее</a>
+
+          <div class="events__wrap-swiper">
+            <div class="swiper events__swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/event290-1.jpg"
+                      media="(max-width: 440px)"
+                    />
+                    <source
+                      srcset="img/events/event317-1.jpg"
+                      media="(max-width: 768px)"
+                    />
+                    <source
+                      srcset="img/events/event290-1.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="img/events/event-1.jpg" alt="event" />
+                  </picture>
+                  <div class="events__wrap">
+                    <span class="events__span"
+                      >Музей им. Щусева<br />
+                      с 20 марта по 30 апреля</span
+                    >
+                    <h3 class="h3 events__h3">
+                      Книжная гравюра в<br />восприятии
+                    </h3>
+                    <p class="events__desc">
+                      Один из&nbsp;ведущих флорентийских художников Кватроченто,
+                      основатель художественной династии, которую продолжили его
+                      брат Давид и&nbsp;сын Ридольфо
+                    </p>
+                    <a class="events__link" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/event290-2.jpg"
+                      media="(max-width: 440px)"
+                    />
+                    <source
+                      srcset="img/events/event317-2.jpg"
+                      media="(max-width: 768px)"
+                    />
+                    <source
+                      srcset="img/events/event290-2.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="img/events/event-2.jpg" alt="event" />
+                  </picture>
+                  <div class="events__wrap">
+                    <span class="events__span"
+                      >ММОМА<br />
+                      24 марта 19:00</span
+                    >
+                    <h3 class="h3 events__h3">
+                      «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                    </h3>
+                    <p class="events__desc">
+                      Высокий уровень вовлечения представителей целевой
+                      аудитории является чётким доказательством простого факта
+                    </p>
+                    <a class="events__link" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/event290-3.jpg"
+                      media="(max-width: 440px)"
+                    />
+                    <source
+                      srcset="img/events/event317-3.jpg"
+                      media="(max-width: 768px)"
+                    />
+                    <source
+                      srcset="img/events/event290-3.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="img/events/event-3.jpg" alt="event" />
+                  </picture>
+                  <div class="events__wrap">
+                    <span class="events__span"
+                      >Еврейский музей<br />
+                      с 31 марта по 21 апреля</span
+                    >
+                    <h3 class="h3 events__h3">Выставка «Формация 2020»</h3>
+                    <p class="events__desc">
+                      Идейные соображения высшего порядка, а также современная
+                      методология разработки играет важную роль в формировании
+                      глубокомысленных рассуждений
+                    </p>
+                    <a class="events__link" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/event290-4.jpg"
+                      media="(max-width: 440px)"
+                    />
+                    <source
+                      srcset="img/events/event317-4.jpg"
+                      media="(max-width: 768px)"
+                    />
+                    <source
+                      srcset="img/events/event290-4.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="img/events/event-4.jpg" alt="event" />
+                  </picture>
+                  <div class="events__wrap">
+                    <span class="events__span"
+                      >ММАМ<br />
+                      с 8 апреля по 20 мая</span
+                    >
+                    <h3 class="h3 events__h3">
+                      Джон Винзор. Фотографии из серии «Метафора»
+                    </h3>
+                    <p class="events__desc">
+                      Один из&nbsp;ведущих флорентийских художников Кватроченто,
+                      основатель художественной династии, которую продолжили его
+                      брат Давид и&nbsp;сын Ридольфо
+                    </p>
+                    <a class="events__link" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/event290-5.jpg"
+                      media="(max-width: 440px)"
+                    />
+                    <source
+                      srcset="img/events/event317-5.jpg"
+                      media="(max-width: 768px)"
+                    />
+                    <source
+                      srcset="img/events/event290-5.jpg"
+                      media="(max-width: 1024px)"
+                    />
+                    <img src="img/events/event-5.jpg" alt="event" />
+                  </picture>
+                  <div class="events__wrap">
+                    <span class="events__span"
+                      >Третьяковка на Крымском валу<br />
+                      с 30 марта по 30 апреля</span
+                    >
+                    <h3 class="h3 events__h3">
+                      XXIV Международная биеннале молодого искусства
+                    </h3>
+                    <p class="events__desc">
+                      Внезапно, реплицированные с зарубежных источников,
+                      современные исследования
+                    </p>
+                    <a class="events__link" href="#">Подробнее</a>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    srcset="img/events/event290-2.jpg"
-                    media="(max-width: 440px)"
-                  />
-                  <source
-                    srcset="img/events/event317-2.jpg"
-                    media="(max-width: 768px)"
-                  />
-                  <source
-                    srcset="img/events/event290-2.jpg"
-                    media="(max-width: 1024px)"
-                  />
-                  <img src="img/events/event-2.jpg" alt="event" />
-                </picture>
-                <div class="events__wrap">
-                  <span class="events__span"
-                    >ММОМА<br />
-                    24 марта 19:00</span
-                  >
-                  <h3 class="h3 events__h3">
-                    «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                  </h3>
-                  <p class="events__desc">
-                    Высокий уровень вовлечения представителей целевой аудитории
-                    является чётким доказательством простого факта
-                  </p>
-                  <a class="events__link" href="#">Подробнее</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    srcset="img/events/event290-3.jpg"
-                    media="(max-width: 440px)"
-                  />
-                  <source
-                    srcset="img/events/event317-3.jpg"
-                    media="(max-width: 768px)"
-                  />
-                  <source
-                    srcset="img/events/event290-3.jpg"
-                    media="(max-width: 1024px)"
-                  />
-                  <img src="img/events/event-3.jpg" alt="event" />
-                </picture>
-                <div class="events__wrap">
-                  <span class="events__span"
-                    >Еврейский музей<br />
-                    с 31 марта по 21 апреля</span
-                  >
-                  <h3 class="h3 events__h3">Выставка «Формация 2020»</h3>
-                  <p class="events__desc">
-                    Идейные соображения высшего порядка, а также современная
-                    методология разработки играет важную роль в формировании
-                    глубокомысленных рассуждений
-                  </p>
-                  <a class="events__link" href="#">Подробнее</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    srcset="img/events/event290-4.jpg"
-                    media="(max-width: 440px)"
-                  />
-                  <source
-                    srcset="img/events/event317-4.jpg"
-                    media="(max-width: 768px)"
-                  />
-                  <source
-                    srcset="img/events/event290-4.jpg"
-                    media="(max-width: 1024px)"
-                  />
-                  <img src="img/events/event-4.jpg" alt="event" />
-                </picture>
-                <div class="events__wrap">
-                  <span class="events__span"
-                    >ММАМ<br />
-                    с 8 апреля по 20 мая</span
-                  >
-                  <h3 class="h3 events__h3">
-                    Джон Винзор. Фотографии из серии «Метафора»
-                  </h3>
-                  <p class="events__desc">
-                    Один из&nbsp;ведущих флорентийских художников Кватроченто,
-                    основатель художественной династии, которую продолжили его
-                    брат Давид и&nbsp;сын Ридольфо
-                  </p>
-                  <a class="events__link" href="#">Подробнее</a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    srcset="img/events/event290-5.jpg"
-                    media="(max-width: 440px)"
-                  />
-                  <source
-                    srcset="img/events/event317-5.jpg"
-                    media="(max-width: 768px)"
-                  />
-                  <source
-                    srcset="img/events/event290-5.jpg"
-                    media="(max-width: 1024px)"
-                  />
-                  <img src="img/events/event-5.jpg" alt="event" />
-                </picture>
-                <div class="events__wrap">
-                  <span class="events__span"
-                    >Третьяковка на Крымском валу<br />
-                    с 30 марта по 30 апреля</span
-                  >
-                  <h3 class="h3 events__h3">
-                    XXIV Международная биеннале молодого искусства
-                  </h3>
-                  <p class="events__desc">
-                    Внезапно, реплицированные с зарубежных источников,
-                    современные исследования
-                  </p>
-                  <a class="events__link" href="#">Подробнее</a>
-                </div>
-              </div>
+              <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div
+              class="swiper-button-prev"
+              aria-label="Кнопка переключения на предыдущий слайд"
+            ></div>
+            <div
+              class="swiper-button-next"
+              aria-label="Кнопка переключения на следующий слайд"
+            ></div>
           </div>
         </div>
       </section>
@@ -1327,16 +1339,32 @@
             государства смешаны с&nbsp;не&nbsp;уникальными данными
             до&nbsp;степени совершённой неузнаваемости, из-за чего возрастает
             их&nbsp;статус бесполезности. Прежде всего, постоянное
-            информационно-пропагандистское обеспечение нашей деятельности
-            однозначно фиксирует необходимость экономической целесообразности
-            принимаемых решений. И&nbsp;нет сомнений, что действия
-            представителей оппозиции могут быть рассмотрены исключительно
-            в&nbsp;разрезе маркетинговых и&nbsp;финансовых предпосылок.
-            Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители
-            современных социальных резервов призывают нас к&nbsp;новым
-            свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
-            с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой
-            неузнаваемости. Подробнее:
+            информационно-пропагандистское
+            <span
+              class="tooltip"
+              data-tooltip="Мы за свободу слова и самовыражения!"
+              >i</span
+            >
+            обеспечение нашей деятельности однозначно фиксирует необходимость
+            экономической целесообразности принимаемых решений. И&nbsp;нет
+            сомнений, что действия представителей оппозиции могут быть
+            рассмотрены
+            <span
+              class="tooltip"
+              data-tooltip="Это могут быть происки конкурентов..."
+              >i</span
+            >
+            исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
+            <span
+              class="tooltip"
+              data-tooltip="На нашу оппозицию без слез не взглянешь!"
+              >i</span
+            >
+            предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
+            представители современных социальных резервов призывают нас
+            к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть
+            смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
+            совершённой неузнаваемости. Подробнее:
             <a class="projects__link" href="#">blanchard-art.ru/projects</a>
           </p>
           <h3 class="h3 projects__h3">Партнёры проектов:</h3>
@@ -1354,7 +1382,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-freelands-foundation.png"
+                    src="img/projects/projects-freelands-foundation-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1375,7 +1403,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-institute-forconteporary-art.png"
+                    src="img/projects/projects-institute-forconteporary-art-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1392,7 +1420,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-workhouse.png"
+                    src="img/projects/projects-workhouse-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1409,7 +1437,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-1849.png"
+                    src="img/projects/projects-1849-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1426,7 +1454,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-hiscox.png"
+                    src="img/projects/projects-hiscox-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1443,7 +1471,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-camden.png"
+                    src="img/projects/projects-camden-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1460,7 +1488,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-stassen.png"
+                    src="img/projects/projects-stassen-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1477,7 +1505,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-watts.png"
+                    src="img/projects/projects-watts-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1494,7 +1522,7 @@
                   />
                   <img
                     class="projects__img"
-                    src="img/projects/projects-esad.png"
+                    src="img/projects/projects-esad-color.png"
                     alt="partner"
                   />
                 </picture>
@@ -1509,7 +1537,7 @@
         <div class="container contacts__container">
           <div class="contacts__title-wrap">
             <h3 class="h3 contacts__h3">Шоурум № 4</h3>
-            <span class="desc-title contacts_desc"
+            <span class="desc-title contacts__desc"
               >Леонтьевский переулок, дом 5/1</span
             >
           </div>
@@ -1534,7 +1562,7 @@
               Заказать <span>обратный звонок</span>
             </button>
           </form>
-          <div class="form__messengers">
+          <div class="form-messengers">
             <h3 class="h3">Связаться в один клик</h3>
             <a href="#" aria-label="Ссылка ведущая на наш Whats'up">
               <svg

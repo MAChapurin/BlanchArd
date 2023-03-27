@@ -9,8 +9,13 @@ function init(){
         center: [55.760824, 37.615443],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
-        zoom: 17
+        zoom: 17,
     });
+
+    myMap.behaviors.disable('scrollZoom');
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      myMap.behaviors.disable('drag');
+  }
 
 
 var myPlacemark = new ymaps.Placemark([55.760824, 37.615443], {}, {

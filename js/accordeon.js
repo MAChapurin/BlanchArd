@@ -119,7 +119,7 @@ const PAINTERS_PAGE = {
   name: document.querySelector("#catalog__left > .h3"),
   lifeYears: document.querySelector("#catalog__left > .desc-title"),
   description: document.querySelector("#catalog__left > .description"),
-  link: document.getElementById('default__link')
+  link: document.getElementById('default-link')
 };
 
 console.log(PAINTERS_PAGE);
