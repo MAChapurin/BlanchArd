@@ -21,7 +21,7 @@ btn.addEventListener('click', ()=> {
 const searchBlock = document.querySelector('.header__search')
 const searchIcon = document.querySelector('#search-icon')
 const logo = document.querySelector('.logo')
-const closeBtn = document.querySelector('.header__search_close')
+const closeBtn = document.querySelector('.header__search-close')
 
 searchIcon.addEventListener('click', ()=> {
   logo.style.opacity = 0
