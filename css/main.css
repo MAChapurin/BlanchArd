@@ -56,6 +56,7 @@ body {
   font-size: 16px;
   font-style: normal;
   position: relative; /*experiment*/
+  min-width: 320px;
 }
 
 .modal {
@@ -104,6 +105,7 @@ body {
 
 .modal__left img {
   height: 100%;
+  object-fit: cover;
 }
 
 .modal__rigth {
@@ -375,10 +377,10 @@ a {
     -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
-  -webkit-transition: top 0.3s ease-in-out,
-    border-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out,
-    border-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: top 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
     border-color 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, top 0.3s ease-in-out,
@@ -468,7 +470,8 @@ a {
   border-color: var(--purple-three);
   background: -webkit-gradient(
     linear,
-    left bottom, left top,
+    left bottom,
+    left top,
     from(rgba(194, 131, 243, 0.2)),
     to(rgba(194, 131, 243, 0.2))
   );
@@ -493,7 +496,8 @@ a {
   border-color: transparent;
   background: -webkit-gradient(
     linear,
-    left bottom, left top,
+    left bottom,
+    left top,
     from(rgba(194, 131, 243, 0.4)),
     to(rgba(194, 131, 243, 0.4))
   );
@@ -926,6 +930,7 @@ a {
   background-color: var(--gray-one);
   top: 9%;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .galery__swiper .swiper-button-next {
@@ -1053,8 +1058,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   /* padding: 0;
   padding-top: 11px; */
   padding: 35px 0 35px;
@@ -1198,7 +1203,7 @@ a {
 }
 
 .ac-text a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0px;
   height: 1px;
@@ -1260,14 +1265,14 @@ a {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .default-link {
@@ -1306,10 +1311,12 @@ a {
 
 .events__wrap-swiper {
   position: relative;
+
 }
 
 .events__swiper {
   width: 100%;
+  height: 100%;
 }
 
 .events__swiper img {
@@ -1327,6 +1334,8 @@ a {
   border: 1px solid var(--gray-three);
   /* min-height: 700px; */
   height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .events .swiper-button-next,
@@ -1377,14 +1386,10 @@ a {
 
 .events__wrap {
   padding: 13px 50px 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 395px;
+  flex-grow: 1;
 }
 
 .events__span {
@@ -1404,6 +1409,7 @@ a {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+  /* flex-grow: 1; */
   margin-bottom: auto;
 }
 
@@ -1469,7 +1475,7 @@ a {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 8px 8px 8px 0px;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
   content: attr(
     data-tooltip
@@ -1529,7 +1535,7 @@ a {
   min-height: 150px;
   border: 1px solid var(--gray-three);
   -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  filter: grayscale(1);
   -webkit-transition: -webkit-filter 0.3s ease-in-out;
   transition: -webkit-filter 0.3s ease-in-out;
   -o-transition: filter 0.3s ease-in-out;
@@ -1539,7 +1545,7 @@ a {
 
 .projects__swiper .swiper-slide:hover {
   -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  filter: grayscale(0);
 }
 
 .projects__img {
@@ -1579,6 +1585,7 @@ a {
 }
 
 .form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1592,10 +1599,10 @@ a {
   padding: 15px 24px;
   border: 1px solid var(--black-two);
   border-radius: 100px;
-  -webkit-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
-  -o-transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  -webkit-transition: border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
@@ -1640,6 +1647,10 @@ a {
   opacity: 0.8;
 }
 
+.form-messengers a {
+  transition: opacity 0.3s ease-in-out;
+}
+
 .form-messengers a:hover {
   opacity: 0.7;
 }
@@ -1652,6 +1663,38 @@ a {
 .form__input.no-valid {
   border: 1px solid var(--red-color);
   color: var(--red-color);
+}
+
+.form .just-validate-error-label {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.form .just-validate-error-label:last-of-type {
+  position: absolute;
+  bottom: -20px;
+  left: 35%;
+}
+
+.form__modal {
+  position: absolute;
+  bottom: -105px;
+  right: 0;
+  background-color: var(--green-color);
+  color: var(--purple-three);
+  width: 300px;
+  height: 100px;
+  border: 5px solid var(--purple-three);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 5000;
 }
 
 .whats-up {

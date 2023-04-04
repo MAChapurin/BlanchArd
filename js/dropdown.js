@@ -28,3 +28,24 @@ btns.forEach(item => {
     this.classList.toggle(activeClassbtns);
   })
 })
+
+const body = document.body;
+
+body.addEventListener('click', (e)=> {
+  hasClass(e.target, '.hero__nav')
+})
+
+function hasClass(el, className) {
+  if(el.closest(className)) return;
+
+  btns.forEach(el => {
+    if (el != this) {
+      el.classList.remove(activeClassbtns)
+    }
+  });
+  dropdowns.forEach(el => {
+
+      el.classList.remove(activeClassdropdowns)
+
+  });
+}

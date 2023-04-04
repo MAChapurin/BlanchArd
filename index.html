@@ -33,6 +33,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="libs/just-validate.min.js"></script>
+    <script src="libs/inputmask.min.js"></script>
+
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
     <script defer src="libs/choices.min.js"></script>
     <script defer src="libs/accordion.min.js"></script>
     <script defer src="js/swipers.js"></script>
@@ -44,7 +49,7 @@
     <script defer src="js/select.js"></script>
     <script defer src="js/validation.js"></script>
     <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      src="https://api-maps.yandex.ru/2.1/?apikey=16d88a67-a3e3-4c78-af8e-5af75f0cfd6d&lang=ru_RU"
       type="text/javascript"
     ></script>
     <script defer src="js/map.js"></script>
@@ -53,7 +58,10 @@
   <body>
     <div class="modal" style="display: none">
       <div class="modal__wrap">
-        <button class="modal__close" aria-label="Кнопка закрытия модального окна">
+        <button
+          class="modal__close"
+          aria-label="Кнопка закрытия модального окна"
+        >
           <svg
             width="16"
             height="16"
@@ -220,7 +228,12 @@
             >Контакты</a
           >
         </nav>
-        <a href="#" class="header__link" tabindex="1" aria-label="Ссылка войти на сайт">
+        <a
+          href="#"
+          class="header__link"
+          tabindex="1"
+          aria-label="Ссылка войти на сайт"
+        >
           <svg
             width="13"
             height="13"
@@ -1541,18 +1554,22 @@
               >Леонтьевский переулок, дом 5/1</span
             >
           </div>
-          <form action="post" class="form">
+          <form class="form">
             <input
               type="text"
               class="form__input"
               placeholder="Имя*"
               aria-label="Поле ввода имени"
+              data-validate-field="name"
+              name="name"
             />
             <input
               type="tel"
               class="form__input"
               placeholder="Телефон*"
               aria-label="Поле ввода номера телефона"
+              data-validate-field="tel"
+              name="tel"
             />
             <button
               type="submit"
@@ -1561,6 +1578,9 @@
             >
               Заказать <span>обратный звонок</span>
             </button>
+            <div class="form__modal" style="display: none;">
+              Форма успешно отправлена!
+            </div>
           </form>
           <div class="form-messengers">
             <h3 class="h3">Связаться в один клик</h3>

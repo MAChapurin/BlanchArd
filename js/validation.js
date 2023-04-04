@@ -1,45 +1,63 @@
-const form = document.querySelector('.form');
+// import {JustValidate} from '../libs/just-validate.min.';
+
+const form = document.querySelector(".form");
 const inputName = form.querySelector('[type="text"]');
-const inputPhone = form.querySelector('[type="tel"]');
+const inputPhone = form.querySelector('input[type="tel"]');
 const inputBtn = form.querySelector('[type="submit"]');
+const formModal = form.querySelector(".form__modal");
 
-function sendValidMessage(el, message) {
-  el.classList.add('no-valid');
-  el.value = message;
-  setTimeout(()=> {
-    el.classList.remove('no-valid');
-    el.value = '';
-    el.focus();
-  }, 3000);
-}
+console.log(inputName, inputPhone);
 
-form.addEventListener('submit', (e)=> {
-  e.preventDefault();
-  if(!inputName.value.length) {
-   sendValidMessage(inputName, 'Вы не ввели имя');
-  }
-  if(!inputPhone.value.length) {
-   sendValidMessage(inputPhone, 'Вы не ввели телефон');
-  }
-  if(inputName.value.length <= 1) {
-    sendValidMessage(inputName, 'Имя слишком короткое');
-  }
+let selector = document.querySelector("input[type='tel']");
 
-  if(inputName.value.match(/\d/)) {
-    sendValidMessage(inputName, 'Недопустимое значение');
-  }
+let im = new Inputmask("+7(999) 999-99-99");
+im.mask(selector);
 
-  if(inputPhone.value.match(/\D/)) {
-    sendValidMessage(inputPhone, 'Недопустимое значение');
-  }
+const validate = new JustValidate(".form");
 
-  else {
-    inputName.value = '';
-    inputPhone.value = '';
-    inputBtn.innerHTML = 'Форма успешно отправлена';
-    setTimeout(()=> {
-      inputBtn.innerHTML = `  Заказать <span>обратный звонок</span>`;
-    }, 5000)
-  }
-  console.log(inputName.value, inputPhone.value);
-})
+validate
+  .addField(inputName, [
+    {
+      rule: "required",
+      errorMessage: "Имя обязательно к заполнению",
+    },
+    {
+      rule: "minLength",
+      value: 2,
+      errorMessage: "Имя слишком короткое",
+    },
+    {
+      rule: "maxLength",
+      value: 10,
+      errorMessage: "Имя слишком длинное",
+    },
+  ])
+  .addField(inputPhone, [
+    {
+      rule: "required",
+      errorMessage: "Телефон обязателен к заполнению",
+    },
+    {
+      validator: function(name, value) {
+      const phone = selector.inputmask.unmaskedvalue()
+      return Number(phone) && phone.length === 10
+      },
+      errorMessage: 'Номер должен содержать 10 цифр',
+      }
+  ])
+  .onSuccess(() => {
+    console.log(inputName.value, inputPhone.value);
+    inputName.value = "";
+    inputPhone.value = "";
+    validate.refresh();
+    formModal.style.display = "flex";
+    setTimeout(() => {
+      formModal.style.opacity = 1;
+    }, 0);
+    setTimeout(() => {
+      formModal.style.opacity = 0;
+    }, 3000);
+    setTimeout(() => {
+      formModal.style.display = "";
+    }, 3500);
+  });
