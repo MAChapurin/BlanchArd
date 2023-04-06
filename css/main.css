@@ -1067,9 +1067,9 @@ a {
 
 .ac-trigger .h3 {
   margin-right: auto;
-  -webkit-transition: color 0.3 s ease-in-out, background-color 0.3s ease-in-out;
-  -o-transition: color 0.3 s ease-in-out, background-color 0.3s ease-in-out;
-  transition: color 0.3 s ease-in-out, background-color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .ac .ac-trigger::after {
@@ -1095,6 +1095,7 @@ a {
 
 .ac-trigger:hover .catalog__button {
   background-color: var(--purple-one);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .ac-trigger:active span {
